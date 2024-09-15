@@ -1,0 +1,84 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+//Algorithm
+// 1,We use the Scanner class to read user input.
+// 2,Nested If-Else Statements: The logic to evaluate the following series of steps based on user responses.
+// 3,If the user answers "yes" at any step, the program outputs "Glad to be of help." and cease immediately.
+//4,If the user answers "no" to a step, the program proceeds to the next step,and
+//If all steps are completed with "no" responses, the final step suggests getting a new router.
+
+// Author(s): Eyasu Arifcho
+// Date of Last Modification: 07/14/2020
+// Course: CS111B 
+// Instructor: C. Conner
+// Assignment # 2
+// File Name: we will write a program - WiFiTest.java
+// This program will  uses nested if-else statements to test a series of conditions and perform an action depending on which condition is true
+
+   import java.util.Scanner;
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+        
+        // Step 1: Reboot the computer and check
+        System.out.println("Reboot the computer and try to connect.");
+        System.out.print("Did that fix the problem? ");
+        String response1 = scanner.nextLine();
+
+        if (response1.equalsIgnoreCase("no")) {
+            
+            // Step 2: Reboot the router and check
+            System.out.println("Reboot the router and try to connect.");
+            System.out.print("Did that fix the problem? ");
+            String response2 = scanner.nextLine();
+
+            if (response2.equalsIgnoreCase("no")) {
+                
+                // Step 3: Check cables
+                System.out.println("Make sure the cables between the router and modem are plugged in firmly.");
+                System.out.print("Did that fix the problem? ");
+                String response3 = scanner.nextLine();
+
+                if (response3.equalsIgnoreCase("no")) {
+                    
+                    // Step 4: Move the router
+                    System.out.println("Move the router to a new location and try to connect.");
+                    System.out.print("Did that fix the problem? ");
+                    String response4 = scanner.nextLine();
+
+                    if (response4.equalsIgnoreCase("no")) {
+                        
+                        // Final step: Get a new router
+                        System.out.println("Get a new router.");
+                        
+                    } else {
+                        System.out.println("Glad to be of help.");
+                    }
+                    
+                } else {
+                    System.out.println("Glad to be of help.");
+                }
+                
+            } else {
+                System.out.println("Glad to be of help.");
+            }
+            
+        } else {
+            System.out.println("Glad to be of help.");
+        }
+        
+        // Close the Scanner object
+        scanner.close();
+    }
+}
